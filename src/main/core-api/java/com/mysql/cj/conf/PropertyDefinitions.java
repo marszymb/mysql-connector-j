@@ -165,6 +165,10 @@ public class PropertyDefinitions {
         CATALOG, SCHEMA;
     }
 
+    public enum RedirectionOption {
+        OFF, ON, PREFERRED;
+    }
+
     /**
      * Static unmodifiable {@link PropertyKey} -&gt; {@link PropertyDefinition} map.
      */
@@ -233,6 +237,9 @@ public class PropertyDefinitions {
 
                 new EnumPropertyDefinition<>(PropertyKey.databaseTerm, DatabaseTerm.CATALOG, RUNTIME_MODIFIABLE,
                         Messages.getString("ConnectionProperties.databaseTerm"), "8.0.17", CATEGORY_CONNECTION, Integer.MIN_VALUE),
+
+                new EnumPropertyDefinition<>(PropertyKey.enableRedirect, RedirectionOption.OFF, RUNTIME_MODIFIABLE,
+                        Messages.getString("ConnectionProperties.enableRedirect"), "8.0.23", CATEGORY_CONNECTION, Integer.MIN_VALUE),
 
                 //
                 // CATEGORY_SESSION

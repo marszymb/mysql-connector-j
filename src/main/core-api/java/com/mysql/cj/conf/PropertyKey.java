@@ -255,7 +255,8 @@ public enum PropertyKey {
     xdevapiUseAsyncProtocol("xdevapi.useAsyncProtocol", "xdevapiUseAsyncProtocol", true), //
 
     yearIsDateType("yearIsDateType", true), //
-    zeroDateTimeBehavior("zeroDateTimeBehavior", true) //
+    zeroDateTimeBehavior("zeroDateTimeBehavior", true), //
+    enableRedirect("enableRedirect", true) //
     ;
 
     private String keyName;
